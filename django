@@ -1,0 +1,39 @@
+Các app trong django là "pluggable": sử dụng 1 app trong nhiều project khác nhaunên cần phải khai báo app trong project trong ```settings.py```
+
+### Model 
+
+Model là thiết kế cơ sở dữ liệu cộng với metadata.
+
+Bao gồm các thuộc tính và hành vi cơ bản.
+
+Định nghĩa trong file models.py.
+
+Mỗi model là 1 lớp con của django.db.models.Model, có các biến, mỗi biến là 
+1 thuộc tính trong cơ sở dữ liệu.
+
+Mỗi thuộc tính trong model là 1 thể hiện của lớp ```Field``` ví dụ: ```CharField```... định nghĩa kiểu dữ liệu của các biến.
+
+Các thay đổi model:
+
+- Sửa file ```models.py```
+- Chạy lệnh ```python3 manage.py makemigrations ``` để tạo "migration"
+- Chạy lệnh ```python3 manage.py migrate``` để áp dụng các "migration" cho cơ sở dữ liệu.
+
+### View 
+
+VIew là 1 loại Web page trong ứng dụng Django chứa 1 số chức năng và có 1 template cụ thể.
+
+Ánh xạ từ URL - view: Django tự động tìm view tương ứng với URL thông qua ```URLconfs```
+
+### Template
+
+Là đoạn mã python được nhúng trong html, sẽ được server biên dịch thành html và trả kết quả cho người dùng.
+Template sẽ được view gọi ví dụ qua câu lệnh ```render```.
+Các template thường đăt trong thư mục template ví dụ: /templates/polls/index.html
+
+### Static file
+
+là các file css, js,... trợ giúp cho hiển thị template
+Được đặt trong static ví dụ: /static/polls/style.css
+
+ 
